@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service SpamService {
+  rpc DetectSpam (SpamRequest) returns (SpamResponse);
+}
+
+message SpamRequest {
+  string content = 1;
+}
+
+message SpamResponse {
+  bool isSpam = 1;
+  string reason = 2;
+}

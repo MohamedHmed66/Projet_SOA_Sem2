@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ClassificationService {
+  rpc ClassifyContent(ContentRequest) returns (ClassificationResponse);
+}
+
+message ContentRequest {
+  string content = 1;
+}
+
+message ClassificationResponse {
+  string category = 1;
+}

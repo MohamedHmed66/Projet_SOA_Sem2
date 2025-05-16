@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service ModerationService {
+  rpc ModerateContent(ContentRequest) returns (ModerationResponse);
+}
+
+message ContentRequest {
+  string content = 1;
+}
+
+message ModerationResponse {
+  bool isToxic = 1;
+  float score = 2;
+}

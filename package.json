@@ -1,0 +1,26 @@
+{
+  "name": "projet_soa_sem2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx cross-env NODE_NO_WARNINGS=1 KAFKAJS_NO_PARTITIONER_WARNING=1 node app.js",
+    "start:classification": "npx cross-env NODE_NO_WARNINGS=1 node classification-service/server.js",
+    "start:moderation": "npx cross-env NODE_NO_WARNINGS=1 node moderation-service/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.3",
+    "@grpc/proto-loader": "^0.7.15",
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.17.1",
+    "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
